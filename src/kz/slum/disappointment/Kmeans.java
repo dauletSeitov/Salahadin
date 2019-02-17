@@ -5,12 +5,13 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Kmeans {
 
         private static final int COUNT_OF_CLUSTERS = 5;
         private static final int MAX_ITERATION = 30;
-        private static final String SOURCE_FILE = "/home/skynet/Downloads/data.txt";
+        private static final String SOURCE_FILE = "/home/skynet/IdeaProjects/Salahadin/src/kz/slum/disappointment/data.txt";
 
         private int countOfAtributes;
         private Map<Integer, List<Double>> dataTable = new HashMap<>();
@@ -28,9 +29,10 @@ public class Kmeans {
                 initData();
                 int dataSize = dataTable.size();
                 countOfAtributes = dataTable.get(0).size();
-                Random random = new Random();
+                List<Integer> randomInts = IntStream.range(0, dataSize).boxed().collect(Collectors.toList());
+                Collections.shuffle(randomInts);
                 for (int i = 0; i < COUNT_OF_CLUSTERS; i++){
-                        List<Double> doubles = dataTable.get(random.nextInt(dataSize));
+                        List<Double> doubles = dataTable.get(randomInts.get(i));
                         currentCentres.put(i, doubles);
                 }
 
@@ -140,10 +142,8 @@ public class Kmeans {
 
                 for (Integer clusterKey : clusters.keySet()){
                         List<Integer> cluster = clusters.get(clusterKey);
-                        List<Double> sums = new ArrayList<>(countOfAtributes);
-                        for (int i = 0; i < countOfAtributes; i++) {
-                                sums.add(0.0);
-                        }
+                        List<Double> sums = new ArrayList<>(Collections.nCopies(countOfAtributes, 0.0));
+
                         for (Integer objectId : cluster){
                                 List<Double> object = dataTable.get(objectId);
                                 sum(sums, object);
