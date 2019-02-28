@@ -1,5 +1,7 @@
 package kz.slum.disappointment;
 
+import org.omg.PortableInterceptor.INACTIVE;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -9,7 +11,7 @@ import java.util.stream.IntStream;
 
 public class Kmeans {
 
-        private static final int COUNT_OF_CLUSTERS = 5;
+        private int COUNT_OF_CLUSTERS = -1;
         private static final int MAX_ITERATION = 30;
         private static final String SOURCE_FILE = "/home/skynet/IdeaProjects/Salahadin/src/kz/slum/disappointment/data.txt";
 
@@ -20,20 +22,26 @@ public class Kmeans {
 
 
         public static void main(String[] args) throws IOException {
-                new Kmeans().start();
+                Kmeans kmeans = new Kmeans();
+                kmeans.initData();
+
+                DefineCentroids defineCentroids = new DefineCentroids(kmeans.dataTable);
+                Set<Integer> centroids = defineCentroids.start();
+
+                kmeans.start(centroids);
         }
 
 
-        private void start() throws IOException {
+        private void start(Set<Integer> centroids) throws IOException {
 
-                initData();
-                int dataSize = dataTable.size();
                 countOfAtributes = dataTable.get(0).size();
-                List<Integer> randomInts = IntStream.range(0, dataSize).boxed().collect(Collectors.toList());
-                Collections.shuffle(randomInts);
-                for (int i = 0; i < COUNT_OF_CLUSTERS; i++){
-                        List<Double> doubles = dataTable.get(randomInts.get(i));
-                        currentCentres.put(i, doubles);
+
+                COUNT_OF_CLUSTERS = centroids.size();
+
+                int index = 0;
+                for (Integer centroidId : centroids){
+                        List<Double> doubles = dataTable.get(centroidId);
+                        currentCentres.put(index++, doubles);
                 }
 
                 for (int outer = 0; outer < MAX_ITERATION; outer++) {
