@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f633ac33-b8f1-4dc3-8bf4-d31efc9890f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/kz/slum/disappointment/DefineCentroids.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kz/slum/disappointment/Kmeans.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kz/slum/disappointment/Kmeans.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Salahadin/kz/slum/disappointment/Kmeans.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Salahadin/kz/slum/disappointment/Kmeans.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,7 +42,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/kz/slum/disappointment/data.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="388">
               <caret line="39" column="13" lean-forward="true" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
             </state>
           </provider>
@@ -164,7 +164,7 @@
       <workItem from="1550177214576" duration="118000" />
       <workItem from="1550178660749" duration="4361000" />
       <workItem from="1550414256818" duration="6987000" />
-      <workItem from="1551374891905" duration="7609000" />
+      <workItem from="1551374891905" duration="8769000" />
     </task>
     <task id="LOCAL-00001" summary="fixed bugs">
       <created>1550183022005</created>
@@ -201,17 +201,23 @@
       <option name="project" value="LOCAL" />
       <updated>1551374924888</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="min max">
+      <created>1551382518276</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1551382518276</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19075000" />
+    <option name="totallyTimeSpent" value="20235000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16214721" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16214721" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -221,14 +227,14 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.33407325" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.6437292" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.6437292" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.5027747" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.5027747" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32963374" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -248,7 +254,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixed bugs" />
     <MESSAGE value="new unique random centres" />
-    <option name="LAST_COMMIT_MESSAGE" value="new unique random centres" />
+    <MESSAGE value="min max" />
+    <option name="LAST_COMMIT_MESSAGE" value="min max" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -326,7 +333,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kz/slum/disappointment/data.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="388">
           <caret line="39" column="13" lean-forward="true" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
         </state>
       </provider>
