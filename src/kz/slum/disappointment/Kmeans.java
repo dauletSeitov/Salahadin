@@ -1,19 +1,16 @@
 package kz.slum.disappointment;
 
-import org.omg.PortableInterceptor.INACTIVE;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class Kmeans {
 
         private int COUNT_OF_CLUSTERS = -1;
         private static final int MAX_ITERATION = 30;
-        private static final String SOURCE_FILE = "/home/skynet/IdeaProjects/Salahadin/src/kz/slum/disappointment/data.txt";
+        private static final String SOURCE_FILE = "/home/user/IdeaProjects/Salahadin/src/kz/slum/disappointment/data.txt";
 
         private int countOfAtributes;
         private Map<Integer, List<Double>> dataTable = new HashMap<>();
@@ -21,28 +18,55 @@ public class Kmeans {
         private Map<Integer, List<Integer>> clusters = new HashMap<>();
 
 
-        public static void main(String[] args) throws IOException {
-                Kmeans kmeans = new Kmeans();
-                kmeans.initData();
-
-                DefineCentroids defineCentroids = new DefineCentroids(kmeans.dataTable);
-                Set<Integer> centroids = defineCentroids.start();
-
-                kmeans.start(centroids);
+        public Map<Integer, List<Double>> getDataTable() {
+                return dataTable;
         }
 
+        public Map<Integer, List<Integer>> getClusters() {
+                return clusters;
+        }
 
-        private void start(Set<Integer> centroids) throws IOException {
+        public Map<Integer, List<Double>> getCurrentCentres() {
+                return currentCentres;
+        }
+
+        public void start(Map<Integer, List<Double>> centroids){
 
                 countOfAtributes = dataTable.get(0).size();
 
                 COUNT_OF_CLUSTERS = centroids.size();
+
+                currentCentres = centroids;
+
+                clusters = new HashMap<>();
+
+                start();
+
+        }
+
+        public void start(Set<Integer> centroids) {
+
+                countOfAtributes = dataTable.get(0).size();
+
+                COUNT_OF_CLUSTERS = centroids.size();
+
+                currentCentres = new HashMap<>();
 
                 int index = 0;
                 for (Integer centroidId : centroids){
                         List<Double> doubles = dataTable.get(centroidId);
                         currentCentres.put(index++, doubles);
                 }
+
+                clusters = new HashMap<>();
+
+                start();
+        }
+
+
+        public void start() {
+
+
 
                 for (int outer = 0; outer < MAX_ITERATION; outer++) {
                         for (int i = 0; i < COUNT_OF_CLUSTERS; i++) {
@@ -71,9 +95,9 @@ public class Kmeans {
                         boolean equals = equals(newCentres, currentCentres);
                         System.out.println("\n" + outer + ") iteration");
                         System.out.println("old centre: ");
-                        print(currentCentres);
+                        print(currentCentres, COUNT_OF_CLUSTERS);
                         System.out.println("new centre: ");
-                        print(newCentres);
+                        print(newCentres, COUNT_OF_CLUSTERS);
                         System.out.println("-----------------------------------------------------------------------------------------");
                         if(equals){
                                 break;
@@ -83,11 +107,11 @@ public class Kmeans {
                 }
 
                 System.out.println("\ncluster: ");
-                printf(clusters);
+                printf(clusters, COUNT_OF_CLUSTERS);
 
         }
 
-        private void initData() throws IOException {
+        public void initData() throws IOException {
                 BufferedReader br = new BufferedReader(new FileReader(SOURCE_FILE));
 
                 String line = null;
@@ -103,12 +127,24 @@ public class Kmeans {
         }
 
         private boolean equals(Map<Integer, List<Double>> newCentres, Map<Integer, List<Double>> oldCenters) {
-                for (int i = 0; i < COUNT_OF_CLUSTERS; i++) {
-                        boolean equals = equalsList(newCentres.get(i), oldCenters.get(i));
+
+                LinkedList<Integer> newCentresKeySet = new LinkedList<>(newCentres.keySet());
+                LinkedList<Integer> oldCentersKeySet = new LinkedList<>(oldCenters.keySet());
+
+                newCentresKeySet.sort(Integer::compareTo);
+                oldCentersKeySet.sort(Integer::compareTo);
+
+
+                while(!newCentresKeySet.isEmpty()) {
+
+                        boolean equals = equalsList(newCentres.get(newCentresKeySet.pollFirst()), oldCenters.get(oldCentersKeySet.peekFirst()));
                         if(!equals){
                                 return false;
                         }
+
+
                 }
+
                 return true;
         }
 
@@ -121,16 +157,16 @@ public class Kmeans {
                 return true;
         }
 
-        private Double calculateDistance(List<Double> firstDot, List<Double> secondDot){
+        public static double calculateDistance(List<Double> firstDot, List<Double> secondDot){
 
-                Double sum = 0.0;
+                double sum = 0.0;
                 for (int i = 0; i < firstDot.size(); i++) {
                         sum += Math.pow(firstDot.get(i)-secondDot.get(i), 2);
                 }
                 return Math.sqrt(sum);
         }
 
-        private Integer min (List<Double> list){
+        public static Integer min (List<Double> list){
 
                 Double min = list.get(0);
                 int minIndex = 0;
@@ -175,17 +211,17 @@ public class Kmeans {
                 }
         }
 
-        private void print(Map<Integer, List<Double>> currentCentres){
+        public static void print(Map<Integer, List<Double>> currentCentres, int size){
 
-                for (int i = 0; i < COUNT_OF_CLUSTERS; i++) {
+                for (int i = 0; i < size; i++) {
                         System.out.println(currentCentres.get(i));
                 }
 
         }
 
-        private void printf(Map<Integer, List<Integer>> clusters){
+        public static void printf(Map<Integer, List<Integer>> clusters, int size){
 
-                for (int i = 0; i < COUNT_OF_CLUSTERS; i++) {
+                for (int i = 0; i < size; i++) {
                         System.out.println(clusters.get(i));
                 }
 

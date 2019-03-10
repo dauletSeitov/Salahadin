@@ -42,7 +42,7 @@ public class DefineCentroids {
 
            Double innerMin = Double.MAX_VALUE;
            for(Integer centroidId: centroids) {
-               Double centroidItem = calculateDistance(dataTable.get(centroidId), dataTable.get(itmKey));
+               Double centroidItem = Kmeans.calculateDistance(dataTable.get(centroidId), dataTable.get(itmKey));
                if(centroidItem < innerMin)
                    innerMin = centroidItem;
            }
@@ -79,7 +79,7 @@ public class DefineCentroids {
         Double maxDistance = 0.0;
         int maxIndex = -1;
         for (Integer itmKey : dataTable.keySet()) {
-            Double distance = calculateDistance(firtCentroid, dataTable.get(itmKey));
+            Double distance = Kmeans.calculateDistance(firtCentroid, dataTable.get(itmKey));
             
             if(maxDistance < distance){
                 maxDistance = distance;
@@ -91,15 +91,6 @@ public class DefineCentroids {
         
     }
 
-
-    private Double calculateDistance(List<Double> firstDot, List<Double> secondDot){
-
-        Double sum = 0.0;
-        for (int i = 0; i < firstDot.size(); i++) {
-            sum += Math.pow(firstDot.get(i)-secondDot.get(i), 2);
-        }
-        return Math.sqrt(sum);
-    }
     
 }
 
