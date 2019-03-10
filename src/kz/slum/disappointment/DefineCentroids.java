@@ -64,10 +64,6 @@ public class DefineCentroids {
         return true;
     }
 
-
-
-
-
     private Double average (){
 
         return maxCentroidDistances.stream().mapToDouble(itm -> itm).average().orElseThrow(NullPointerException::new);
@@ -91,7 +87,6 @@ public class DefineCentroids {
         
     }
 
-    
 }
 
 
