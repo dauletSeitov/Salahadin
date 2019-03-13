@@ -58,7 +58,6 @@ public class DefineCentroids {
             maxCentroidDistances.add(objectMinDistance.minDistance);
             centroids.add(objectMinDistance.id);
         } else {
-            System.out.println("centroids: " + centroids);
             return false;
         }
         return true;

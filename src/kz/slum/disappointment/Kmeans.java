@@ -8,13 +8,13 @@ import java.util.stream.Collectors;
 
 public class Kmeans {
 
-        private int COUNT_OF_CLUSTERS = -1;
-        private static final int MAX_ITERATION = 30;
-        private static final String SOURCE_FILE = "/home/user/IdeaProjects/Salahadin/src/kz/slum/disappointment/data.txt";
+        private int COUNT_OF_CLUSTERS = -1;     //количество кластеров
+        private static final int MAX_ITERATION = 30;    //максимальное количество итерации
+        private static final String SOURCE_FILE = "/home/user/IdeaProjects/Salahadin/src/kz/slum/disappointment/data.txt"; //путь к файлу
 
-        private int countOfAtributes;
-        private Map<Integer, List<Double>> dataTable = new HashMap<>();
-        private Map<Integer, List<Double>> currentCentres = new HashMap<>();
+        private int countOfAtributes;   //количество артибутов
+        private Map<Integer, List<Double>> dataTable = new HashMap<>(); //таблица данных
+        private Map<Integer, List<Double>> currentCentres = new HashMap<>(); //
         private Map<Integer, List<Integer>> clusters = new HashMap<>();
 
 
@@ -93,12 +93,12 @@ public class Kmeans {
                         Map<Integer, List<Double>> newCentres = average(clusters);
 
                         boolean equals = equals(newCentres, currentCentres);
-                        System.out.println("\n" + outer + ") iteration");
-                        System.out.println("old centre: ");
-                        print(currentCentres, COUNT_OF_CLUSTERS);
-                        System.out.println("new centre: ");
-                        print(newCentres, COUNT_OF_CLUSTERS);
-                        System.out.println("-----------------------------------------------------------------------------------------");
+                        //System.out.println("\n" + outer + ") iteration");
+                        //System.out.println("old centre: ");
+                        //print(currentCentres, COUNT_OF_CLUSTERS);
+                        //System.out.println("new centre: ");
+                        //print(newCentres, COUNT_OF_CLUSTERS);
+                        //System.out.println("-----------------------------------------------------------------------------------------");
                         if(equals){
                                 break;
                         } else {
@@ -106,7 +106,7 @@ public class Kmeans {
                         }
                 }
 
-                System.out.println("\ncluster: ");
+                System.out.println("\nКластеры: ");
                 printf(clusters, COUNT_OF_CLUSTERS);
 
         }
@@ -222,7 +222,7 @@ public class Kmeans {
         public static void printf(Map<Integer, List<Integer>> clusters, int size){
 
                 for (int i = 0; i < size; i++) {
-                        System.out.println(clusters.get(i));
+                        System.out.println(i + ") " + clusters.get(i));
                 }
 
         }

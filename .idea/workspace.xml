@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f633ac33-b8f1-4dc3-8bf4-d31efc9890f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Salahadin/kz/slum/disappointment/Start.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kz/slum/disappointment/DefineCentroids.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kz/slum/disappointment/DefineCentroids.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kz/slum/disappointment/Kmeans.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kz/slum/disappointment/Kmeans.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kz/slum/disappointment/ReduceClusters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kz/slum/disappointment/ReduceClusters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kz/slum/disappointment/Start.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/kz/slum/disappointment/ReduceClusters.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="354">
+              <caret line="57" column="44" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -29,11 +33,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/kz/slum/disappointment/Kmeans.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-229">
+              <caret line="108" column="46" selection-start-line="108" selection-start-column="46" selection-end-line="108" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kz/slum/disappointment/DefineCentroids.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1290">
-              <caret line="88" column="4" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="4" />
+            <state relative-caret-position="294">
+              <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -51,10 +67,18 @@
     <findStrings>
       <find>calculateDistance</find>
       <find>distance</find>
-      <find>centroids</find>
       <find>min</find>
       <find>print</find>
+      <find>firs</find>
+      <find>print(</find>
+      <find>cluster:</find>
+      <find>centroids</find>
+      <find>&quot;centroids</find>
+      <find>cluster</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,49 +92,33 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/kz/slum/disappointment/Start.java" />
+        <option value="$PROJECT_DIR$/../Jarvis/src/com/company/Start.java" />
+        <option value="$PROJECT_DIR$/src/kz/slum/disappointment/DefineCentroids.java" />
         <option value="$PROJECT_DIR$/src/kz/slum/disappointment/Kmeans.java" />
         <option value="$PROJECT_DIR$/src/kz/slum/disappointment/ReduceClusters.java" />
-        <option value="$PROJECT_DIR$/src/kz/slum/disappointment/DefineCentroids.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="25" />
-    <option name="width" value="927" />
-    <option name="height" value="1055" />
+    <option name="x" value="993" />
+    <option name="y" value="27" />
+    <option name="width" value="907" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Salahadin" type="b2602c69:ProjectViewProjectNode" />
               <item name="Salahadin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Salahadin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Salahadin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Salahadin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Salahadin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="disappointment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Salahadin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Salahadin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="disappointment" type="462c0819:PsiDirectoryNode" />
-              <item name="DefineCentroids.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
           </expand>
           <select />
@@ -121,7 +129,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552218178943" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552487910888" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
@@ -149,7 +157,7 @@
       <module name="Salahadin" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="kz.slum.disappointment.*" />
+          <option name="PATTERN" value="com.company.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -162,7 +170,20 @@
       <module name="Salahadin" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="kz.slum.disappointment.*" />
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Start" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Start" />
+      <module name="Jarvis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -173,6 +194,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ReduceClusters" />
+        <item itemvalue="Application.Start" />
         <item itemvalue="Application.Kmeans" />
       </list>
     </recent_temporary>
@@ -191,6 +213,11 @@
       <workItem from="1550178660749" duration="4361000" />
       <workItem from="1550414256818" duration="6987000" />
       <workItem from="1551374891905" duration="8769000" />
+      <workItem from="1552224516972" duration="10000" />
+      <workItem from="1552226918977" duration="793000" />
+      <workItem from="1552232233816" duration="2102000" />
+      <workItem from="1552279797136" duration="137000" />
+      <workItem from="1552485315840" duration="2903000" />
     </task>
     <task id="LOCAL-00001" summary="fixed bugs">
       <created>1550183022005</created>
@@ -262,17 +289,23 @@
       <option name="project" value="LOCAL" />
       <updated>1552218178865</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="reduce clusters">
+      <created>1552220370543</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1552220370543</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28867000" />
+    <option name="totallyTimeSpent" value="35310000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1599336" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12174875" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -281,17 +314,17 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.37957823" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3529412" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.1809101" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32963374" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.21420644" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="5" />
+      <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.1809101" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32963374" />
+      <window_info anchor="bottom" id="Debug" order="12" weight="0.8146504" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -344,18 +377,6 @@
     <MESSAGE value="reduce clusters" />
     <option name="LAST_COMMIT_MESSAGE" value="reduce clusters" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/kz/slum/disappointment/ReduceClusters.java</url>
-          <line>54</line>
-          <properties />
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
@@ -405,26 +426,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kz/slum/disappointment/Kmeans.java">
+    <entry file="file://$PROJECT_DIR$/../Jarvis/src/com/company/Start.java" />
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/Integer.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="109" column="50" selection-start-line="109" selection-start-column="50" selection-end-line="109" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#786#787#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#888#889#0" expanded="true" />
-            <element signature="e#931#932#0" expanded="true" />
-            <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1045#1046#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kz/slum/disappointment/ReduceClusters.java">
+    <entry file="file://$PROJECT_DIR$/src/kz/slum/disappointment/Kmeans.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="-229">
+          <caret line="108" column="46" selection-start-line="108" selection-start-column="46" selection-end-line="108" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -433,8 +446,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kz/slum/disappointment/DefineCentroids.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="88" column="4" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="4" />
+        <state relative-caret-position="294">
+          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kz/slum/disappointment/ReduceClusters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="57" column="44" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

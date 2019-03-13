@@ -7,7 +7,7 @@ public class ReduceClusters {
 
     private Map<Integer, List<Double>> dataTable = new HashMap<>();
 
-    private int reduceClustersTo = 3;
+    private int reduceClustersTo = 2;
 
     public static void main(String[] args) throws IOException {
         new ReduceClusters().start();
@@ -25,6 +25,10 @@ public class ReduceClusters {
         DefineCentroids defineCentroids = new DefineCentroids(kmeans.getDataTable());
         Set<Integer> firstCentroids = defineCentroids.start();
 
+
+        System.out.println("\nПо алгоритму максимального растояния опеределили центры: " + firstCentroids);
+
+        System.out.print("\nЗапускаем алгоритм ближайшего соседа для центров: " + firstCentroids);
         kmeans.start(firstCentroids);
 
         Map<Integer, List<Double>> prototype = kmeans.getCurrentCentres();
@@ -37,7 +41,7 @@ public class ReduceClusters {
                 Map<Integer, List<Double>> centroids = new HashMap();
                 centroids.putAll(prototype);
                 centroids.remove(centerId);
-
+                System.out.print("\nЗапускаем алгоритм ближайшего соседа для " + centroids.size() + " ти центров: " );
                 kmeans.start(centroids);
 
                 Map<Integer, List<Integer>> clusters = kmeans.getClusters();
@@ -50,8 +54,9 @@ public class ReduceClusters {
 
             Integer minId = Kmeans.min(resultCentroids);
             prototype.remove(minId);
-        }
 
+            System.out.println("----------> сократился кластер: " + minId);
+        }
         kmeans.start(prototype);
 
     }
